@@ -1,142 +1,107 @@
-// Empty objects
-// let user = {}
-// let user2 = new Object()
+// const name = "Khrystyna"
+// const name1 = 'Khrystyna ${name}'
 
-// key: value
+// console.log(`Hello ${name}, how are you? ${name1}`)
 
-const user = {
-    name: 'Khrystyna',
-    age: 21,
-    isStudent: false,
-    // like reading: true,
-    "like reading": true,
-}
+// Get length of string
+// console.log(name.length)
+// console.log('Hello'.length)
 
-// user.name = "Khrystyna"
-// add new property
-user.city = "Lviv"
+// Get letter from string
+// const firstLetter = name[100]
+/**  charAt(position) */
+// const secondLetter = name.charAt(100)
 
-// delete user property
-delete user.isStudent
+// console.log(firstLetter, '-', secondLetter)
 
-// edit exist property
-user.isStudent = true
-
-// Doesn't work for objects if it const
-// user = {}
-
-// console.log('user', user)
-
-let key = "like reading"
-// console.log('user likes', user["like reading"])
-// The same as
-// console.log('user likes', user[key])
-
-// Check key in object
-// console.log('check city', "city" in user)
-// console.log('check city', "country" in user)
-
-// for (let key in user) {
-//     alert(key + user[key])
-//     // alert("Key is: " + key + ", value is: " + user[key])
-//     alert(`Key is: ${key}, value is: ${user[key]}`)
+// Loops for string
+// for (let letter of name) {
+//   console.log('char', letter)
 // }
 
-// const customObj = {
-//     key1: "value1",
-//     key2: "value2"
+// for (let i = 0; i < name.length; i++) {
+//   console.log(name[i])
 // }
 
-// Object.freeze(customObj)
+// const randomWord = 'asAsvVSSGasb'
 
-// customObj.key1 = "changed value1"
-// delete customObj.key2
+// const upperCase = randomWord.toUpperCase()
+// const lowerCase = randomWord.toLowerCase()
 
-// const customObj2 = {
-//     key3: "value3"
+// console.log('upper', upperCase, 'lower', lowerCase)
+
+// indexOf, includes
+// const hello = 'Hello world!'
+
+// Return the index of letter or substring in the string
+/** indexOf(substring, position) */
+// console.log(hello.indexOf('world') !== -1)
+
+// if (hello.indexOf('world') !== -1) {
 // }
 
-// const mergedObjects = Object.assign(customObj, customObj2)
 
-// console.log('mergedObjects', mergedObjects)
+// Return the boolean(true/false) if letter of substring present in string
+/** includes(substring, position) */
+// console.log(hello.includes('world'))
 
-let a = {
-    name: "Khrystyna",
-    age: 21,
-}
+// if (hello.includes(name)) {
+// do something
+// }
 
-let b = a
-
-b.name = "Anna"
-// "2" === 2 false
-// "2" == 2 true
-// console.log('ab', a === b)
-
-let c = {}
-let d = {}
-
-// console.log('cd', c === d)
-
-const person = {
-    name: 'Khrystyna',
-    age: 21,
-    isStudent: false,
-    education: {
-        city: 'Lviv',
-        name: 'LPNU',
-        course: 4,
-        degree: 'bachelor',
-    },
-
-    // sayHi: function() {
-    //     alert("Hello")
-    // }
-
-    // sayHi() {
-    //     console.log(this.age)
-    // }
-}
-// const sayHi = () => alert("Hi")
-// sayHi()
-const person2 = {
-    name: "Anna"
-}
-
-const sayFunction = function() {
-    console.log(this.name)
-}
-
-// person.sayHi = sayFunction
-// person2.sayHi = sayFunction
+// const name = 'Khrystyna'
+// const keyWord = 'password'
 //
-// person.sayHi()
-// person2.sayHi()
+// const newPassword = prompt('Create your password')
+//
+// if (newPassword.includes(name) || newPassword.includes(keyWord)) {
+//   alert('your password is bad')
+// } else {
+//   alert('great password')
+// }
 
-function test() {
-    console.log('this', this)
-}
+// startsWith, endsWith
+const hello = 'Hello world!'
+// Return the boolean(true/false) if string starts from letter of substring
+/** startsWith(substring, position) */
+// console.log(hello.startsWith('llo', 2))
 
-test()
+// Return the boolean(true/false) if string ends from letter of substring
+/** endsWith(substring, position) */
+// console.log(hello.endsWith('ld!', 9))
 
+// slice, substring, substr
 
-const testArrow = () => console.log('this arrow', this)
+// Return the part of string from and to (from cannot be large than to)
+/** slice(from, to) */
+// console.log(hello.slice(8, 10))
+// console.log(hello.slice(-4, -2))
 
-testArrow()
+// Return the part of string from and to (from can be large than to)
+/** substring(from, to) */
+// console.log(hello.substring(7, 3))
+// console.log(hello.substring(3, 7))
 
-// person.sayHi()
+// console.log(hello.slice(2, 9))
 
-// console.log('name university', person.education.name)
+// Return the part of string from position with needed length
+/** substr(from, length) */
+// console.log(hello.substr(2, 7))
 
+// UTF-16
+// console.log('c' > 'C') // true 97 > 65
+// console.log('Abc'.codePointAt(0))
+// console.log('a'.codePointAt(0))
 
+// localeCompare
+const str = 'str'
+const str2 = 'srt'
+console.log('r'.codePointAt(0)) // 114
+console.log('l'.codePointAt(0)) // 108
+console.log(str.localeCompare(str2))
 
-
-
-
-
-
-
-
-
-
+// -1, str < str2
+// 1 str > str2
+// 0 str === str2
 
 
